@@ -3,4 +3,36 @@
   <groupId>com.shreyas.crud-spring</groupId>
   <artifactId>crud-spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-beans</artifactId>
+  		<version>4.3.10.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>4.3.10.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-core</artifactId>
+  		<version>4.3.10.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-jdbc</artifactId>
+  		<version>4.3.10.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>8.0.7-dmr</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.openejb</groupId>
+  		<artifactId>commons-dbcp-all</artifactId>
+  		<version>1.3-r699049</version>
+  	</dependency>
+  </dependencies>
 </project>
