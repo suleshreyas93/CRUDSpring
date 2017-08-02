@@ -74,5 +74,14 @@ public class StudentDao {
 		return jdbc.update("insert into student(student_name,degree,course,university) values(:studentName,:degree,:course,:university)", params) == 1;
 		
 	}
+	
+	//Delete Student
+	public boolean deleteStudent(int id)
+	{
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("id", id);
+		
+		return jdbc.update("delete from student where student_id = :id", params) == 1;
+	}
 
 }

@@ -16,6 +16,7 @@ public class App {
 		
 		try
 		{
+			//Getting all students
 			List<Student> student = stud_dao.getAllStudents();
 			
 			System.out.println("=============================================================================================================");
@@ -27,6 +28,7 @@ public class App {
 				System.out.println();
 			}
 			
+			//Getting student by id
 			System.out.println("Student with Id 3 is : ");
 			Student stud = stud_dao.getStudentById(3);
 			
@@ -36,11 +38,24 @@ public class App {
 			System.out.println("Course : "+stud.getCourse());
 			System.out.println("University : "+stud.getUniversity());
 			
-			Student sourabh = new Student("Sourabh Kulkarni","Master's","Computer Engineering","Oxford University");
+			//Inserting students
+			Student namrata = new Student("Namrata Jadhav","Master's","Project Management","New York University");
+			Student tanmay = new Student("Tanmay Chitnis","B.E","Computer Engineering","Mumbai University");
 			
-			if(stud_dao.addStudent(sourabh))
+			if(stud_dao.addStudent(namrata))
 			{
-				System.out.println(sourabh.getStudentName()+" added successfully");
+				System.out.println(namrata.getStudentName()+" added successfully");
+			}
+			
+			if(stud_dao.addStudent(tanmay))
+			{
+				System.out.println(tanmay.getStudentName()+"added successfully");
+			}
+			
+			//Deleting student
+			if(stud_dao.deleteStudent(4))
+			{
+				System.out.println(stud_dao.getStudentById(4).getStudentName()+" deleted ");
 			}
 		}
 		catch(DataAccessException ex)
