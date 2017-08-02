@@ -39,7 +39,7 @@ public class App {
 			System.out.println("University : "+stud.getUniversity());
 			
 			//Inserting students
-			Student namrata = new Student("Namrata Jadhav","Master's","Project Management","New York University");
+			/*Student namrata = new Student("Namrata Jadhav","Master's","Project Management","New York University");
 			Student tanmay = new Student("Tanmay Chitnis","B.E","Computer Engineering","Mumbai University");
 			
 			if(stud_dao.addStudent(namrata))
@@ -50,13 +50,29 @@ public class App {
 			if(stud_dao.addStudent(tanmay))
 			{
 				System.out.println(tanmay.getStudentName()+"added successfully");
-			}
+			}*/
 			
 			//Deleting student
-			if(stud_dao.deleteStudent(4))
+			/*Student deleteStudent1 = stud_dao.getStudentById(8);
+			Student deleteStudent2 = stud_dao.getStudentById(9);
+			if(stud_dao.deleteStudent(8))
 			{
-				System.out.println(stud_dao.getStudentById(4).getStudentName()+" deleted ");
+				System.out.println(deleteStudent1.getStudentName()+" deleted ");
 			}
+			if(stud_dao.deleteStudent(9))
+			{
+				System.out.println(deleteStudent2.getStudentName()+" deleted ");
+			}*/
+			
+			//Updating student
+			Student pranit = new Student(2,"Pranit Kulkarni","Master's","Computer Science","Carnegie Mellon");
+			
+			if(stud_dao.updateStudent(pranit))
+			{
+				System.out.println(stud_dao.getStudentById(2).getStudentName()+" updated successfully ");
+			}
+			
+			
 		}
 		catch(DataAccessException ex)
 		{

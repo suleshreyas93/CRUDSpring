@@ -83,5 +83,13 @@ public class StudentDao {
 		
 		return jdbc.update("delete from student where student_id = :id", params) == 1;
 	}
+	
+	//Update Student
+	public boolean updateStudent(Student student)
+	{
+		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(student);
+		
+		return jdbc.update("update student set degree = :degree where student_id = :studentId ", params) == 1;
+	}
 
 }
