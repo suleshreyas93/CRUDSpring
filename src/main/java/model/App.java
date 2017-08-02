@@ -35,6 +35,13 @@ public class App {
 			System.out.println("Degree : "+stud.getDegree());
 			System.out.println("Course : "+stud.getCourse());
 			System.out.println("University : "+stud.getUniversity());
+			
+			Student sourabh = new Student("Sourabh Kulkarni","Master's","Computer Engineering","Oxford University");
+			
+			if(stud_dao.addStudent(sourabh))
+			{
+				System.out.println(sourabh.getStudentName()+" added successfully");
+			}
 		}
 		catch(DataAccessException ex)
 		{
